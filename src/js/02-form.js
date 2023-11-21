@@ -4,15 +4,38 @@ const form = document.querySelector('.feedback-form'),
   formBtn = document.querySelector('button'),
   localStorageKey = 'feedback-form-state';
 
+const getItemStorage = () => {
+  const getStorage = localStorage.getItem(localStorageKey);
+  const parseStorage = JSON.parse(getStorage);
 
+  if (parseStorage) {
+    input.value = parseStorage.email;
+    textArea.value = parseStorage.message;
+  }
+};
 
-  form.addEventListener('input', e => {
-    e.preventDefault();
+getItemStorage();
 
-    const formValue = {
-      email: input.value.trim(),
-      message: textArea.value.trim()
-    }
+form.addEventListener('input', e => {
+  e.preventDefault();
 
-    sessionStorage.setItem(localStorageKey, JSON.stringify(formValue))
-  })
+  const formValue = {
+    email: input.value.trim(),
+    message: textArea.value.trim(),
+  };
+
+  localStorage.setItem(localStorageKey, JSON.stringify(formValue));
+});
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (emailRegex.test(input.value.trim()) && textArea.value !== "") {
+    console.log(input.value);
+    console.log(textArea.value);
+    localStorage.removeItem(localStorageKey);
+    form.reset();
+  }
+});
