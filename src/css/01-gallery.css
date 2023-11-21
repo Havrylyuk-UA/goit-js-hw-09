@@ -21,4 +21,17 @@
 
 .sl-wrapper {
   background: rgba(46, 47, 66, 0.80);
+
+}
+
+.sl-wrapper .sl-navigation button {
+  color: #FFF;
+}
+
+.sl-wrapper .sl-close {
+  color: #FFF;
+}
+
+.sl-wrapper .sl-counter {
+  color: #FFF;
 }

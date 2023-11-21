@@ -1,0 +1,62 @@
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 25px auto 25px;
+  max-width: 360px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5; /* 150% */
+  letter-spacing: 0.04em;
+}
+
+.feedback-form input {
+  display: flex;
+  width: 360px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  border: 1px solid #808080;
+}
+
+.feedback-form textarea {
+  display: flex;
+  width: 360px;
+  height: 80px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  resize: none;
+  border-radius: 4px;
+  border: 1px solid #808080;
+}
+
+.feedback-form button {
+  display: flex;
+  width: 95px;
+  height: 40px;
+  padding: 8px 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #4e75ff;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+  border: 1px solid #000;
+}
+
+.feedback-form button:hover,
+.feedback-form button:focus{
+  background: #6C8CFF;
+}

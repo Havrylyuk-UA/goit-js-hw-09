@@ -87,9 +87,8 @@ function getImgFromArr(imgList) {
 galleryBox.insertAdjacentHTML('afterbegin', getImgFromArr(images));
 
 
-const gallery = new SimpleLightbox('.gallery a', {
+const modalImg = new SimpleLightbox('.gallery a', {
   overlayOpacity: 0.  ,
   captionsData: 'alt',
   captionDelay: 250,
-  background: 'rgba(46, 47, 66, 0.80)',
 });
