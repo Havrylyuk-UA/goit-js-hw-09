@@ -1,7 +1,6 @@
 const form = document.querySelector('.feedback-form'),
   input = form.elements.email,
   textArea = form.elements.message,
-  formBtn = document.querySelector('button'),
   localStorageKey = 'feedback-form-state';
 
 const getItemStorage = () => {
