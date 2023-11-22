@@ -31,11 +31,26 @@ form.addEventListener('submit', e => {
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  if (emailRegex.test(input.value.trim()) && textArea.value !== "") {
+  //   if (emailRegex.test(input.value.trim()) && textArea.value !== "") {
+  //     console.log(JSON.parse(localStorage.getItem(localStorageKey)));
+  //     localStorage.removeItem(localStorageKey);
+  //     form.reset();
+  //     } else if (input.value === "" || textArea.value === "") {
+  //       window.alert("You have entered invalid data!")
+  //     }
+  // });
+
+  if (emailRegex.test(input.value.trim()) && textArea.value !== '') {
     console.log(JSON.parse(localStorage.getItem(localStorageKey)));
     localStorage.removeItem(localStorageKey);
     form.reset();
-    } else if (input.value === "" || textArea.value === "") {
-      window.alert("You have entered invalid data!")
-    }
+  } else if (input.value === '' && textArea.value === '') {
+    window.alert('Please fill in the fields!');
+  } else if (input.value === '') {
+    window.alert('The email field is empty!');
+  } else if (textArea.value === '') {
+    window.alert('The message field is empty!');
+  } else if (emailRegex.test(input.value.trim()) != true) {
+    window.alert('The email field is invalid!');
+  }
 });
