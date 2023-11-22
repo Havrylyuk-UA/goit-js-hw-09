@@ -31,20 +31,8 @@ form.addEventListener('submit', e => {
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  // if (emailRegex.test(input.value.trim()) && textArea.value !== "") {
-  //   console.log(localStorage.getItem(localStorageKey));
-  //   localStorage.removeItem(localStorageKey);
-  //   form.reset();
-  // } else if (input.value === "") {
-  //   window.alert("You have entered invalid email!")
-  // } else if (textArea.value === ""){
-  //   window.alert("You have entered invalid message!")
-  // } else {
-  //
-  // }
-
   if (emailRegex.test(input.value.trim()) && textArea.value !== "") {
-    console.log(localStorage.getItem(localStorageKey));
+    console.log(JSON.parse(localStorage.getItem(localStorageKey)));
     localStorage.removeItem(localStorageKey);
     form.reset();
     } else if (input.value === "" || textArea.value === "") {
