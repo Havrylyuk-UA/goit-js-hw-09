@@ -1,4 +1,4 @@
-import SimpleLightbox from "simplelightbox";
+import SimpleLightbox from 'simplelightbox';
 
 const images = [
   {
@@ -86,9 +86,8 @@ function getImgFromArr(imgList) {
 
 galleryBox.insertAdjacentHTML('afterbegin', getImgFromArr(images));
 
-
 const modalImg = new SimpleLightbox('.gallery a', {
-  overlayOpacity: 0.  ,
+  overlayOpacity: 0,
   captionsData: 'alt',
   captionDelay: 250,
 });
